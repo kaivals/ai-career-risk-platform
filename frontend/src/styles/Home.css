@@ -1,0 +1,126 @@
+/* Home Page */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Hero */
+.hero-section {
+  background: linear-gradient(135deg, #0d1f6e 0%, #1a3a8c 40%, #0f52c0 100%);
+  padding: 120px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+}
+
+.hero-content {
+  max-width: 680px;
+}
+
+.hero-title {
+  font-size: clamp(36px, 5.5vw, 60px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  margin: 0 0 24px;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.7;
+  margin: 0 0 40px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta {
+  display: inline-block;
+  background: #0066ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 18px 48px;
+  border-radius: 10px;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(0, 102, 255, 0.45);
+}
+
+.hero-cta:hover {
+  background: #0052cc;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0, 102, 255, 0.5);
+}
+
+/* Features Strip */
+.features-strip {
+  background: #ffffff;
+  padding: 72px 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.strip-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.strip-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px 24px;
+  border: 1px solid #eaeaea;
+  border-radius: 14px;
+  background: #fafafa;
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.strip-card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.strip-icon {
+  font-size: 30px;
+}
+
+.strip-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0d0d0d;
+  margin: 0;
+}
+
+.strip-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .strip-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .hero-section {
+    padding: 80px 20px;
+  }
+
+  .strip-inner {
+    grid-template-columns: 1fr;
+  }
+}
